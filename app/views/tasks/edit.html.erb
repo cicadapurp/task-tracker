@@ -1,7 +1,6 @@
-<h1>Make a new task.</h1>
-<br>
+<h1>edit task</h1>
+
 <%= form_for [@board, @task] do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name, required: true, autofocus: true %>
-<%= f.submit %>
 <% end %>

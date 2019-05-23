@@ -1,2 +1,10 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>click on a task to view the list</h1>
+
+<%= link_to 'create a new task', new_board_task_path %>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= link_to task.name, [@board, task] %>
+  </li>
+  <% end %>
+</ul>
