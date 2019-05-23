@@ -1,0 +1,9 @@
+<h1><%= @board.name %></h1>
+<br>
+<p>what would you like to do</p>
+
+<%= link_to 'view tasks', boards_path(@board) %>
+<br>
+<%= link_to 'edit board', edit_board_path(@board) %>
+<br>
+<%= link_to 'delete board', @board, method: :delete %>
