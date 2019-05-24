@@ -1,2 +1,13 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>click a list to view notes</h1>
+
+<%= link_to 'back to tasks', board_path(@board) %>
+<br>
+
+<%= link_to 'create a new list', new_task_path(@task) %>
+<ul>
+  <% @lists.each do |list| %>
+  <li>
+    <%= link_to list.name, [@task, list] %>
+  </li>
+  <% end %>
+</ul>
