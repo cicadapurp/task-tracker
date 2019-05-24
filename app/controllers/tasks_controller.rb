@@ -44,6 +44,6 @@ before_action :set_task, only: [:show, :edit, :update, :destroy]
     @task = @board.tasks.find(params[:id])
   end
   def task_params
-    params.require(:task).permit(:name)
+    params.require(:task).permit(:name, :dept)
   end
 end

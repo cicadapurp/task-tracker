@@ -2,5 +2,6 @@
 
 <%= form_for [@board, @task] do |f| %>
 <%= f.label :name %>
+<h2>division responsible:  <%= f.select :dept, ['corporate', 'IT', 'human resource', 'public relation'] %></h2>
 <%= f.text_field :name, required: true, autofocus: true %>
 <% end %>
