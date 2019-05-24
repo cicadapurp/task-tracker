@@ -3,6 +3,7 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
   def index
     @lists = @task.lists
+  
   end
 
   def show
@@ -39,6 +40,6 @@ class ListsController < ApplicationController
     @list = @task.lists.find(params[:id])
   end
   def list_params
-    params.require(:list).permit(:name, :note)
+    params.require(:list).permit(:name, :note, :state)
   end
 end

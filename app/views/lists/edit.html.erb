@@ -4,6 +4,7 @@
 <%= f.label :name %>
 <%= f.text_field :name, required: true, autofocus: true %>
 <br>
+<p>state of affairs: <%= f.select :state, ['urgent', 'in progress','no started'] %></p>
 <%= f.label :note %>
 <%= f.text_field :note, required: true %>
 <%= f.submit %>

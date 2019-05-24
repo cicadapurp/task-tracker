@@ -11,3 +11,10 @@
   </li>
   <% end %>
 </ul>
+<h2><% @inprogress.each do |inprogress| %></h2>
+<li>
+  <%= inprogress.lists %>
+  <br>
+  <%= link_to 'Remove', task_list_path(@task, inprogress), method: :delete %>
+</li>
+<% end %>
